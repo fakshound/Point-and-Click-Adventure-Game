@@ -25,8 +25,8 @@ function preload() {
     ekareAscii = loadImage('./images/ekareDarkAscii.png');
     //generate random story array
     a= round(random(3,5));
-    for (let i=1; i<=7; i++) {
-        lvlArray.push((i+1*a)%7);
+    for (let i=1; i<=8; i++) {
+        lvlArray.push((i+1*a)%8);
     }
     myFont = loadFont('./font/Courier-New-Bold.ttf');
     hitCrunchAudio = [createAudio('./audio/hit.mp3'), createAudio('./audio/hit2.mp3'), createAudio('./audio/hit3.mp3')];
@@ -70,7 +70,6 @@ function readAnecdote(i) {
             if(frameCount*random([43,773]) % random([53,109,7919,307]) == 0 ) {
                 let r = round(random(0, story.length));
                 text(story[r%story.length],pointCoordinates[0] + randText[0], pointCoordinates[1] +randText[1]);
-                console.log("movement:" + frameCount);
                 frameRate(3);
             } else {
                 text(story[moves%story.length],pointCoordinates[0] + randText[0], pointCoordinates[1] +randText[1]);
@@ -99,7 +98,7 @@ function readAnecdote(i) {
 
 //Buttons
     function levelButton() {
-        textSize(16);
+        textSize(16);console.log("movement:" + frameCount);
         nxtLvlImg = createButton("Next Level");
         nxtLvlImg.position(475, 0.67*windowHeight);
         nxtLvlImg.mousePressed(nextLevel);
@@ -154,7 +153,7 @@ function traverse() {
         
 }
 
-function theUnit () {
+function theUnit () {console.log("movement:" + frameCount);
     noStroke()
     fill(230);
     ellipse (unitCoordinates[0], unitCoordinates[1], 10, 10);
