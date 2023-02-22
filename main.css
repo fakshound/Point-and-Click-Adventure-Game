@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    /* This centers the sketch horizontally*/
+    justify-content: center;
+
+    /*This centers the sketch verticcally*/
+    align-items: center;
+
+    
+}
+@font-face {
+    font-family: 'Courier-New-Bold';
+    src: url(./font/Courier-New-Bold.ttf);
+  }
+#startHere {
+    position: absolute;
+    top: 10px;
+}
+img {
+    position: absolute;
+}
+button {
+    text-align: center;
+    background-color: #000000;
+    color: #bad3c2;
+    cursor: pointer;
+    font-family: 'Courier-New-Bold';
+    
+}
