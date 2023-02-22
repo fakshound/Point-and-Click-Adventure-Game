@@ -98,7 +98,7 @@ function readAnecdote(i) {
 
 //Buttons
     function levelButton() {
-        textSize(16);console.log("movement:" + frameCount);
+        textSize(16);
         nxtLvlImg = createButton("Next Level");
         nxtLvlImg.position(475, 0.67*windowHeight);
         nxtLvlImg.mousePressed(nextLevel);
@@ -153,7 +153,7 @@ function traverse() {
         
 }
 
-function theUnit () {console.log("movement:" + frameCount);
+function theUnit () {
     noStroke()
     fill(230);
     ellipse (unitCoordinates[0], unitCoordinates[1], 10, 10);
