@@ -100,7 +100,7 @@ function readAnecdote(i) {
     function levelButton() {
         textSize(16);
         nxtLvlImg = createButton("Next Level");
-        nxtLvlImg.position(475, 0.67*windowHeight);
+        nxtLvlImg.position(0.5*windowWidth, 0.67*windowHeight);
         nxtLvlImg.mousePressed(nextLevel);
     }
     function newGame() {
