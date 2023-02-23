@@ -192,7 +192,7 @@
             }
 //fullscreen
 function keyPressed() {
-    if (keyCode === 32) {
+    if (keyCode === 32 || keyCode === 70) {
         let fs = fullscreen();
         fullscreen(!fs);    
     } 
