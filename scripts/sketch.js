@@ -35,7 +35,7 @@
                     thePoint();
                     strokeWeight(1);
                     stroke(204, 255, 204);
-                    textSize(16);
+                    textSize(20);
                     if(frameCount*random([43,773]) % random([53,109,7919,307]) == 0 ) {
                         let r = round(random(0, story.length));
                         text(story[r%story.length],pointCoordinates[0] + randText[0], pointCoordinates[1] +randText[1]);
@@ -47,7 +47,7 @@
         
                     //mirror
                     stroke(100);
-                    textSize(20);
+                    textSize(24);
                     
                     if(frameCount*random([43,863]) % random([53,109,7919,307]) == 0 ) {
                         let r = round(random(0, story.length));
@@ -67,7 +67,7 @@
         
         //New level Buttons
         function levelButton() {
-            textSize(16);
+            textSize(20);
             nxtLvlImg = createButton("Next Level");
             nxtLvlImg.position(0.5*windowWidth, 0.67*windowHeight);
             nxtLvlImg.mousePressed(nextLevel);
@@ -76,7 +76,7 @@
         function textFunc () {
             console.log("gameOver");
             newGameAudio[0].play();
-            textSize(16);
+            textSize(20);
             newGameButton = createButton("NEW GAME");
             newGameButton.position(0.5*windowWidth, 0.67*windowHeight);
             r = 0;
@@ -169,7 +169,7 @@
                 fill(140);
                 stroke(150);
                 strokeWeight(1);
-                textSize(8);
+                textSize(12);
                 let myWords = ["Coffee", "Email", "Funding", "Death", "Speed", "Despair", "Success"];
                 let word = random(myWords);
                 text(word, x + 5, y + 195);
