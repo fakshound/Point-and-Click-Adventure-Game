@@ -124,7 +124,7 @@
         
         function traverse() {
             let d = dist(unitCoordinates[0], unitCoordinates[1], mouseX, mouseY,),
-            v = 15,
+            v = 7,
             t = d/v,
             step = ceil(d/v);
             for (i=1;i<step;i++){
