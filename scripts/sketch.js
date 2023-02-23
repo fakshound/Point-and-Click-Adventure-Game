@@ -169,7 +169,7 @@
                 fill(140);
                 stroke(150);
                 strokeWeight(1);
-                textSize(12);
+                textSize(8);
                 let myWords = ["Coffee", "Email", "Funding", "Death", "Speed", "Despair", "Success"];
                 let word = random(myWords);
                 text(word, x + 5, y + 195);
