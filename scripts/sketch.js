@@ -227,7 +227,7 @@ function draw() {
     background(30);
     titleImage();
     //game over
-    if(r >= lvlArray.length) {
+    if(r >= lvlArray.length -1) {
         //make new gamebutton
         textFunc();
         setTimeout(noLoop(), 150);  
