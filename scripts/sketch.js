@@ -34,7 +34,7 @@
                 //r counter
                 textSize(12);
                 console.log(r);
-                text("level:" + r, windowWidth - 50, windowHeight-10);
+                text("level:" + r, windowWidth - 50, windowHeight-20);
                 
                 if (moves < story.length) {
                     thePoint();
