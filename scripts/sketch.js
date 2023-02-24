@@ -77,13 +77,13 @@
         //New level Buttons
         function levelButton() {
             textSize(20);
-            //if (r >= 5) {
-            //    nxtLvlImg = createButton("Collect Prize");
-            //}
-            //else{
+            if (r >= 5) {
+                nxtLvlImg = createButton("Enjoy");
+            }
+            else{
                 nxtLvlImg = createButton("Next Level");
 
-            //}
+            }
             nxtLvlImg.position(0.5*windowWidth, 0.67*windowHeight);
             nxtLvlImg.mousePressed(nextLevel);
         }
