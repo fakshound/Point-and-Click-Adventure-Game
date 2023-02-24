@@ -20,10 +20,13 @@
             getStoryArray();
             lvlArray = [];
             //generate random story array
-            a= round(random(3,5));
+            randomCeasar = round(random(0,7));
+            let tA = [];
             for (let i=1; i<=8; i++) {
-                lvlArray.push((i+1*a)%8);
+                a= (i+randomCeasar)%8;
+                tA.push(a);
             }
+            lvlArray = [tA[6],tA[4],tA[7],tA[0],tA[5],tA[2],tA[3],tA[1]];
             console.log(lvlArray);
         }
         
@@ -33,7 +36,6 @@
 
                 //r counter
                 textSize(12);
-                console.log(r);
                 text("level:" + r, windowWidth - 100, windowHeight-15);
                 
                 if (moves < story.length) {
@@ -75,13 +77,18 @@
         //New level Buttons
         function levelButton() {
             textSize(20);
-            nxtLvlImg = createButton("Next Level");
+            //if (r >= 5) {
+            //    nxtLvlImg = createButton("Collect Prize");
+            //}
+            //else{
+                nxtLvlImg = createButton("Next Level");
+
+            //}
             nxtLvlImg.position(0.5*windowWidth, 0.67*windowHeight);
             nxtLvlImg.mousePressed(nextLevel);
         }
         //new game button for some reason
         function textFunc () {
-            console.log("gameOver");
             newGameAudio[0].play();
             textSize(20);
             newGameButton = createButton("NEW GAME");
@@ -116,7 +123,7 @@
             }
             //move goal
             if(dist(unitCoordinates[0],unitCoordinates[1],pointCoordinates[0],pointCoordinates[1]) < 30) {
-                let xy = unitCoordinates;
+                let xY = unitCoordinates;
                 //put new point further away from old position
                 do {
                     xY = [random(100, 400),random(5, windowHeight-5)];
