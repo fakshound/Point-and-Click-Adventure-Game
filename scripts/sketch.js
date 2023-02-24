@@ -30,6 +30,11 @@
         function readAnecdote(i) {
             let story = ourAnecdote[lvlArray[i]],
                 randText = [random(5,12), random(-3,3)];
+
+                //r counter
+                textSize(12);
+                console.log(r);
+                text("level:" + r, windowWidth - 50, windowHeight);
                 
                 if (moves < story.length) {
                     thePoint();
@@ -37,8 +42,8 @@
                     stroke(204, 255, 204);
                     textSize(20);
                     if(frameCount*random([43,773]) % random([53,109,7919,307]) == 0 ) {
-                        let r = round(random(0, story.length));
-                        text(story[r%story.length],pointCoordinates[0] + randText[0], pointCoordinates[1] +randText[1]);
+                        let rN = round(random(0, story.length));
+                        text(story[rN%story.length],pointCoordinates[0] + randText[0], pointCoordinates[1] +randText[1]);
                         frameRate(3);
                     } else {
                         text(story[moves%story.length],pointCoordinates[0] + randText[0], pointCoordinates[1] +randText[1]);
@@ -50,12 +55,14 @@
                     textSize(24);
                     
                     if(frameCount*random([43,863]) % random([53,109,7919,307]) == 0 ) {
-                        let r = round(random(0, story.length));
-                        text(story[r%story.length], pointCoordinates[0] +500, pointCoordinates[1]+5);
+                        let rM = round(random(0, story.length));
+                        text(story[rM%story.length], pointCoordinates[0] +500, pointCoordinates[1]+5);
                         frameRate(3);
                     } else {
                         text(story[moves%story.length], pointCoordinates[0] +500, pointCoordinates[1]+5);
                     }
+
+                    
                 
                 } else {
                     nxtLvlAudio[0].play();
@@ -159,6 +166,8 @@
             stroke(80);    
             line (575, 0, 575, windowHeight);
             line (925, 0, 925, windowHeight);
+
+            
         }
         //game background and background functions
         
@@ -227,7 +236,7 @@ function draw() {
     background(30);
     titleImage();
     //game over
-    if(r >= lvlArray.length -1) {
+    if(r == lvlArray.length-2) {
         //make new gamebutton
         textFunc();
         setTimeout(noLoop(), 150);  
